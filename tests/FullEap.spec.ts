@@ -171,7 +171,6 @@ test.describe('FEAP', () => {
     await page.locator('textarea[name="technical_working_groups_in_place_description"]').fill(fixtures.textAreas.stakeholder3); 
     await page.mouse.wheel(0, 100); await page.getByRole('button',{name :"Next"}).click();
 
-    await page.getByRole('button', { name: 'Next' }).click();
 
     await expect(
       page.getByRole('heading', { level: 3, name: 'Risk Analysis' })
